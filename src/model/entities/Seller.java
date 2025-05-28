@@ -11,7 +11,7 @@ public class Seller implements Serializable {
     private String name;
     private String email;
     private Date birthDate;
-    private Double baseS;
+    private Double bases;
 
     private Department department;
 
@@ -23,7 +23,7 @@ public class Seller implements Serializable {
         this.name = name;
         this.email = email;
         this.birthDate = birthDate;
-        this.baseS = baseS;
+        this.bases = baseS;
         this.department = department;
     }
 
@@ -55,12 +55,12 @@ public class Seller implements Serializable {
         this.birthDate = birthDate;
     }
 
-    public Double getBaseS() {
-        return baseS;
+    public Double getBases() {
+        return bases;
     }
 
-    public void setBaseS(Double baseS) {
-        this.baseS = baseS;
+    public void setBases(Double bases) {
+        this.bases = bases;
     }
 
     public Department getDepartment() {
@@ -89,7 +89,7 @@ public class Seller implements Serializable {
                 ", name='" + name + '\'' +
                 ", email='" + email + '\'' +
                 ", birthDate=" + birthDate +
-                ", baseS=" + baseS +
+                ", baseS=" + bases +
                 ", department=" + department +
                 '}';
     }

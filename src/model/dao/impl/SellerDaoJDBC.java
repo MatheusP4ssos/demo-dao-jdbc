@@ -34,6 +34,16 @@ public class SellerDaoJDBC implements SellerDao {
         ResultSet rs = null;
 
         try {
+            // Primeiro, verifica se já existe um vendedor com o mesmo email
+            Seller existingSeller = findByEmail(obj.getEmail());
+            if (existingSeller != null) {
+                System.out.println("Vendedor com email " + obj.getEmail() + " já existe com o ID "
+                        + existingSeller.getId());
+                obj.setId(existingSeller.getId());
+                return;
+            }
+
+
             st = conn.prepareStatement(
                     "INSERT INTO seller " +
                             "(Name, Email, BirthDate, BaseSalary, DepartmentId) " +
@@ -263,6 +273,34 @@ public class SellerDaoJDBC implements SellerDao {
         } finally {
             DB.closeResultSet(rs);
             DB.closeStatement(st);
+        }
+    }
+
+    @Override
+    public Seller findByEmail(String email) {
+        PreparedStatement st = null;
+        ResultSet rs = null;
+
+        try {
+            st = conn.prepareStatement(
+                    "SELECT seller.*, department.Name as DepName "
+                            + "FROM seller INNER JOIN department "
+                            + "ON seller.DepartmentId = department.Id "
+                            + "WHERE seller.Email = ?");
+
+            st.setString(1, email);
+            rs = st.executeQuery();
+
+            if (rs.next()) {
+                Department dep = instantiateDepartment(rs);
+                return instantiateSeller(rs, dep);
+            }
+            return null;
+        } catch (SQLException e) {
+            throw new DbException(e.getMessage());
+        } finally {
+            DB.closeStatement(st);
+            if (rs != null) DB.closeResultSet(rs);
         }
     }
 }

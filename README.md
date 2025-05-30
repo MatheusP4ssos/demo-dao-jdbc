@@ -19,9 +19,9 @@ Sistema desenvolvido em Java para gerenciamento de vendedores e departamentos, u
 * Dependency Injection
 
 ### Diagrama de Classes
-```
+
 # Sistema de Gerenciamento de Vendedores e Departamentos (JDBC)
-![diagrama-de-classe.png](assets/diagrama-de-classe.png)
+![Diagrama PlantUML](https://www.plantuml.com/plantuml/png/hP6zRa8n38NtF8N7LjNb0Uw0ABqBNUyJ668WaXEGumo8zjqRGjIGJXrO8ftZd-yeNaL5qUJPx1XZX8dEMNiA2bS3C82p8so2qe6aw82UHfXLN3YORrF7Pc8c-ST8CSYZuyxPEj7ZX9hxRk_TmqWpCiebcwUqvRjjVnEE3sblKLncoXvtLEDCU2g9ti25IA8lhqMaiys8AYmnAQql6rkDlGlsZtndpge3DF2J8Vs7vkMVq_e3hgtGo5sn7c0Obeyd7E68SK3JRriilfODO5f_rz3PPaN19iy_)
 
 ## 🔧 Funcionalidades
 

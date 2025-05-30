@@ -21,7 +21,6 @@ Sistema desenvolvido em Java para gerenciamento de vendedores e departamentos, u
 ### Diagrama de Classes
 ```
 # Sistema de Gerenciamento de Vendedores e Departamentos (JDBC)
-
 ![diagrama-de-classe.png](assets/diagrama-de-classe.png)
 
 ## 🔧 Funcionalidades

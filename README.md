@@ -1,4 +1,3 @@
-``` markdown
 # Sistema de Gerenciamento de Vendedores e Departamentos (JDBC)
 
 ## 📝 Descrição
@@ -23,7 +22,7 @@ Sistema desenvolvido em Java para gerenciamento de vendedores e departamentos, u
 ```
 # Sistema de Gerenciamento de Vendedores e Departamentos (JDBC)
 
-![Diagrama de Classes](C:\ProjetosIntelijj\demo-dao-jdbc\assets/Diagrama de classe.PNG)
+![Diagrama de Classes](assets/diagrama-de-classe.png)
 
 ## 🔧 Funcionalidades
 
